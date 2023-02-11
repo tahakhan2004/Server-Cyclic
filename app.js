@@ -35,7 +35,7 @@ app.use("/api", routerr)
 //     })
 // })
 
-// app.get("/api/get", (request, response)=>{
+ app.get("/api/get", (request, response)=>{
 //     // poster.find({}, (err, postss) =>{
 //     //     if(err){
 //     //        response.send("error" , err)
@@ -43,8 +43,8 @@ app.use("/api", routerr)
 //     //         response.json(postss)
 //     //     }
 //     // })
-//     response.send("get single user")
-// })
+     response.send("get single user")
+ })
 
 
 // // For editing post

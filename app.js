@@ -18,6 +18,17 @@ app.use(cors())
 
 app.use("/api", routerr)
 
+const connectDB = async () => {
+  try {
+    const conn = await mongoose.connect(process.env.MONGO_URI);
+    console.log(`MongoDB Connected: ${conn.connection.host}`);
+  } catch (error) {
+    console.log(error);
+    process.exit(1);
+  }
+}
+
+
 // connected with frontend
 // app.post("/api/add", (req , res , next) =>{
 //     // const user = req.body
@@ -98,5 +109,6 @@ app.use("/api", routerr)
 
 
 // app.post("/api/")    
-
+connectDB().then(() => {
 app.listen(PORT, ()=> console.log(`Server is running on port: ${PORT}`))
+})

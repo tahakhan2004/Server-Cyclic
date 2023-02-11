@@ -2,6 +2,7 @@ const bycrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
 const userModel = require("../Models/userSchema")
 // const userModel = require("../Models/userSchema")
+const planter = require("../Models/ProductSchema")
 
 const authController  = {
     signup: async (request, response)=>{

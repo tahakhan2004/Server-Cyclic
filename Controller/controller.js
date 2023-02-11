@@ -95,7 +95,31 @@ const authController  = {
     tokennn:  (request, response , next)=>{
         // console.log(request.headers.authorization, "header");
         response.status(200).json({message: "User logged in"})
-    }
+    },
+        addtocart:(request, response, next)=>{
+        const product = request.body
+        planter.create(product, (err, data) =>{
+        if(err){
+            response.send("error", err)
+        }
+        else{
+            response.json({
+                meessage : "Product Added!..",
+                data : data
+            })
+        }    
+    })
+    },
+
+    getCartData:(request, response )=>{
+          planter.find({}, (err, plants) =>{
+        if(err){
+           response.send("error" , err)
+        }else{
+            response.json(plants)
+        }
+    })
+    },
 
 }
 

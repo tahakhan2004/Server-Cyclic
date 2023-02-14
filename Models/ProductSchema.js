@@ -4,6 +4,7 @@ const productSchema = mongoose.Schema({
     title : String,
     image : String,
     price : Number,
+    amount: Number,
 })
 
 // autoIncrement.initialize(mongoose.connection)

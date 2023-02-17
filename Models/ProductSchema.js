@@ -1,10 +1,9 @@
 const mongoose = require("mongoose");
 // const autoIncrement = require("mongoose-auto-increment") 
 const productSchema = mongoose.Schema({
-    title : String,
-    image : String,
+      title : Array,
+    amount: Array,
     price : Number,
-    amount: Number,
 })
 
 // autoIncrement.initialize(mongoose.connection)

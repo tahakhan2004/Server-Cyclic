@@ -4,6 +4,8 @@ const productSchema = mongoose.Schema({
     latitude : Number,
     longitude: Number,
     type : String,
+    Name: String,
+    Email: String,
 })
 
 // autoIncrement.initialize(mongoose.connection)
